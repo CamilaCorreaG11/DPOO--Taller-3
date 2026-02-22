@@ -232,13 +232,4 @@ public class PersistenciaAerolineaJson implements IPersistenciaAerolinea{
 
 
 	
-	private Avion buscarAvionPorNombre(Aerolinea aerolinea, String nombreAvion)
-	{
-	    for (Avion a : aerolinea.getAviones())
-	    {
-	        if (a.getNombre().equals(nombreAvion))
-	            return a;
-	    }
-	    return null;
-	}
 }
