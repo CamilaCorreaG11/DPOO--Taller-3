@@ -53,7 +53,7 @@ public class GeneradorTiquetes
      */
     public static void registrarTiquete( Tiquete unTiquete )
     {
-    	codigos.add(unTiquete.getCode());
+    	codigos.add(unTiquete.getCodigo());
     	
     }
 
