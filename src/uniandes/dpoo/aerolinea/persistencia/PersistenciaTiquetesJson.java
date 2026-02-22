@@ -184,7 +184,7 @@ public class PersistenciaTiquetesJson implements IPersistenciaTiquetes
                 throw new InformacionInconsistenteTiqueteException( "cliente", identificadorCliente );
 
             // Construir y registrar el tiquete
-            Tiquete nuevoTiquete = new Tiquete( codigoTiquete, elVuelo, elCliente, tarifa );
+            Tiquete nuevoTiquete = new Tiquete(codigoTiquete, elVuelo, elCliente, tarifa );
             if( tiqueteUsado )
                 nuevoTiquete.marcarComoUsado( );
             GeneradorTiquetes.registrarTiquete( nuevoTiquete );

@@ -17,8 +17,14 @@ public class GeneradorTiquetes
      * Este conjunto se utiliza para no correr el riesgo de repetir un código.
      */
     private static Set<String> codigos = new HashSet<String>( );
+    
+    
 
-    /**
+    public GeneradorTiquetes() {
+		super();
+	}
+
+	/**
      * Construye un nuevo tiquete con los datos dados y con un identificador que corresponde a una cadena con 7 dígitos
      * @param vuelo El vuelo al que está asociado el tiquete
      * @param cliente El ciente que compró el tiquete
@@ -47,7 +53,8 @@ public class GeneradorTiquetes
      */
     public static void registrarTiquete( Tiquete unTiquete )
     {
-        // TODO implementar
+    	codigos.add(unTiquete.getCode());
+    	
     }
 
     /**
@@ -57,7 +64,6 @@ public class GeneradorTiquetes
      */
     public static boolean validarTiquete( String codigoTiquete )
     {
-        // TODO implementar
-        return false;
+    	return codigos.contains(codigoTiquete);
     }
 }
